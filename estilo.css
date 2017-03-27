@@ -1,0 +1,63 @@
+body{background-color: rgba(252, 230, 205, 1);
+font-family: 'Hind', sans-serif;
+font-size: 14px;
+}
+
+   /* por el punto al principio del selector, esta es una regla para una clase de nombre container */
+     .container{
+       margin:3em;
+       padding:1em;
+       background: rgba(255, 255, 255, 1);
+       box-shadow: 0 0 4px rgba(255, 0, 0, 0.5);
+       border-top: 3px solid white;
+     }
+h1{
+  font-family: 'Raleway', cursive;
+}
+h4{text-align: center;}
+   /* acá defino una regla que se aplica a los elementos header, footer */
+     header, footer{padding:5px;text-align: center;}
+     section{padding:5px}
+     figure{text-align: center;}
+
+   /* acá defino una relga que se aplica solo al elemento footer, que se agrega a lo definido en la regla anterior */
+     footer{margin-top:2em; border-top:1px solid #ddd; font-size:90%;}
+
+   /* acá defino una regla que se aplica al título de tercer nivel cuando está dentro de section */
+       section h3{margin-top:3em;}
+
+   /* acá defino una regla que se aplica a la imagen cuando está dentro de section */
+     section img{max-width:50%;}
+
+   /* acá defino una regla que se aplica a la table cuando está dentro de section */
+     section table{border-collapse: collapse; margin-bottom: 1.5em;}
+
+   /* acá defino una regla que se aplica a la thead dentro de la table cuando está dentro de section */
+     section table thead{background:#eee;}
+
+   /* ¿y qué pasa en este caso? */
+     section table td, section table th{
+       border:1px solid #ccc;
+       padding:10px;
+       margin:0;
+       text-align: left;
+       font-size:90%;
+     }
+
+   /*
+     Cuando pedían permiso de niños,
+     iban su papá y él decía que NO,
+     luego iban con su mamá y ella les decía que SI,
+     entonces SI lo hacían.
+     De la misma forma se comporta CSS,
+     se queda con lo último que le dicen.
+     Eso lo aprovecho acá
+   */
+
+     section table td:first-child, section table th:first-child{
+       text-align: center;
+     }
+
+     section table td:last-child, section table th:last-child{
+       padding-right:40px;
+     }
